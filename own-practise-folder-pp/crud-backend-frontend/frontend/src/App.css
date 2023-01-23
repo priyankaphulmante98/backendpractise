@@ -1,0 +1,61 @@
+
+
+body{
+  font-family: "Poppins", sans-serif;
+/* background-color: rgba(0, 0, 0, 0.849); */
+background-size: cover;
+background-attachment: fixed;
+}
+
+
+#form{
+  width: 500px;
+  height: auto;
+  /* border: 2px solid black; */
+  margin: auto;
+  margin-top: 10px;
+  padding: 30px ;
+  box-shadow: rgba(13, 1, 13, 0.2) 0px 8px 24px;
+  background-color:rgb(229, 202, 202);
+  margin-top: 100px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+
+input[type="text"],
+input[type="number"],
+input[type="date"]{
+width: 80%;
+height:40px;
+border-radius: 5px;
+text-align: center;
+margin-top: 3rem;
+font-size: 16px;
+}
+
+button{
+ 
+  width: 30%;
+
+  height:40px;
+  background-color:orange;
+   color: white;
+   font-size: 20px;
+   border: none;
+   font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 20px;
+ 
+}
+
+button:hover {
+  background-color: rgb(53, 53, 53);
+ 
+}

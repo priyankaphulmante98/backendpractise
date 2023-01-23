@@ -1,0 +1,21 @@
+main app ==>
+
+1] frontend 
+==> npx create-react-app frontend 
+==> download needed dependices 
+==> npm i react-router-dom@6
+==> npm run start
+
+2] backend  
+ ==> create backend folder 
+ ==> index.js
+ ==> npm init -y 
+ ==> npm i express nodemon cors mongoose
+ ==> create folder 
+ ==> Controller --->taskController.js
+     db ---> db.js
+     models ---> taskSchema.js
+     Routes ---> Router.js
+ ==> npm run server
+ 
+
