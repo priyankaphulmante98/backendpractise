@@ -22,7 +22,6 @@ exports.userSignup= async (req, res) => {
         message: "signup sucessfully",
       });
     } else {
-      // alert("already have an account")
       return res.send("already have an account");
     }
   }
