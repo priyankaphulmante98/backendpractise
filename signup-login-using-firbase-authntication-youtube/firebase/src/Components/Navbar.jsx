@@ -3,14 +3,19 @@ import { Link } from 'react-router-dom'
 
 function Navbar() {
     return (
-        <div>
-            <div className='Navbar' style={{display:"flex", backgroundColor:"orange", padding:"20px", fontSize:"22px",   justifyContent:"space-evenly"}}>
-                <Link to="/">Signup</Link>
-                <Link to="/login">Login</Link>
-                <Link to="/todo">Todo</Link>
-            </div>
-        </div>
+
+        
+<nav style={{display:"flex", justifyContent:"space-around"}}>
+  <div className="nav-wrapper">
+
+<ul id="nav-mobile" className="right">   
+      <li><Link to="/">Signup</Link></li>
+      <li><Link to="/login">Login </Link></li>
+      <li><Link to="/todo">Todo</Link></li>
+      <button className='btn'>Logout</button>
+    </ul>
+  </div>
+</nav>
     )
 }
-
 export default Navbar
