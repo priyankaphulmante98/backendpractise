@@ -12,6 +12,7 @@ const [inputData, setInputinputData] = useState({
     desc:"",
     price:""
 })
+const [image, setImage] =useState("");
 
 function handleChange(e){
     // console.log(e.target.value)
@@ -23,6 +24,11 @@ setInputinputData({...inputData,[name]: value })
 
 }
 
+function handleImage(e){
+  console.log(e.target.files[0])
+  setImage(e.target.files[0])
+
+}
 // console.log(inputData);
 async function handleSubmit(e){
     e.preventDefault()
@@ -37,9 +43,10 @@ async function handleSubmit(e){
     data.append('title', title)
     data.append('desc', desc)
     data.append('price', price)
+    data.append('profile', image)
 
     const header = {
-        'Content-Type':'application/json'
+        'Content-Type':'multipart/form-data'
     }
 
    const res = await  postFunction(data, header)
@@ -58,6 +65,7 @@ async function handleSubmit(e){
     return (
         <div>
           <form id="form">
+            <input type="file" name = "image" onChange={handleImage}  />
             <input type="text" name="title"  placeholder='title' onChange={handleChange}/>
             <input type="text" name="desc" placeholder='desc' onChange={handleChange} />
             <input type="number" name="price" placeholder='price' onChange={handleChange}/>

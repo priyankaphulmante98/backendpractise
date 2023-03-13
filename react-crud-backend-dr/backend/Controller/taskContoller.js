@@ -3,13 +3,16 @@ const tasks = require("../models/taskSchema");
 
 
 exports.postTask= async(req, res) => {
-// const {title, desc , price} = req.body
+    const file= req.file.filename;
 
 try {
     const taskData = new tasks({
         title:req.body.title,
         desc:req.body.desc,
-        price:req.body.price
+        price:req.body.price,
+        image:file
+
+
     })
     await taskData.save()
     res.status(200).json(taskData);
